@@ -1,6 +1,4 @@
-from utils import *
-from monster import *
-
+from utils import clear
 
 class Game:
     hero = {}
@@ -10,9 +8,9 @@ class Game:
         self.hero = hero
         self.monster = monster
 
+    # Fight sequence
     def fight(self):
 
-        self.hero.refresh_skills()
         skills = self.hero.enabled_skills()
 
         while True:
@@ -40,14 +38,16 @@ class Game:
                 self.hero.level_up()
                 clear()
 
-            new_monster(self.monster)
+            self.monster.respawn()
         else:
-            monster_attack(self.monster, self.hero)
+            self.monster.attack(self.hero)
 
+    # Main game loop
     def game_loop(self):
         print(
             f"A blood thirsty {self.monster.name} has appeared in front of you!")
 
         while self.hero.hp > 0:
-            print(f"\n\nYou have: {self.hero.hp}/{self.hero.maxhp} life points")
+            print(f"\n\nHP: {self.hero.hp}/{self.hero.max_hp}")
+            print(f"Energy: {self.hero.energy}/{self.hero.max_energy}")
             self.fight()
