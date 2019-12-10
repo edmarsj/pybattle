@@ -11,7 +11,7 @@ What brings me back to the present time, where I was in need to learn python and
 Childhood memories kicked in and... _voila_. Here we are :)
 
 ### How to play
-1. Ensure you have python 3 installed on your machine, you can have the last binaries for your system on the oficial channels or through your system package manager
+1. Ensure you have python 3 installed on your machine, you can have the last binaries for your system on the official channels or through your system package manager
 
 2. Clone or download the repo:
     ```
