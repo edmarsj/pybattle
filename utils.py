@@ -2,7 +2,7 @@ import os
 from random import randint
 
 
-def clear(): return os.system('clear')  # Clears the console window
+def clear(): return os.system('cls' if os.name=='nt' else 'clear')  # Clears the console window
 
 
 def roll_dice(sides):
