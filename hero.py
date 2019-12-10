@@ -39,7 +39,7 @@ class Hero:
     def heal(self):
         heal = 5
         for x in range(self.level):
-            heal += roll_dice(6)
+            heal += roll_dice(8)
 
         if (heal + self.hp) > self.max_hp:
             heal = self.max_hp - self.hp

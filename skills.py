@@ -14,7 +14,7 @@ def add_skills(hero, monster):
             min_level=1,
             action=(lambda: hero.attack(hero.atk, monster))),
 
-        # Heals 1d6 life points per level
+        # Heals 1d8 life points per level
         2: Skill(
             hero,
             name='Heal (1)',
@@ -33,7 +33,7 @@ def add_skills(hero, monster):
         # Adds another dice roll to the charged attack
         4: Skill(
             hero,
-            name='Double tap (1)',
+            name='Double tap (2)',
             energy=2,
             min_level=3,
             action=(lambda: hero.attack(hero.atk + 5 + roll_dice(8), monster)))
